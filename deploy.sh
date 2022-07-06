@@ -13,7 +13,7 @@ cd dist
 echo 'www.jeredleisey.com' > CNAME
 
 git init
-git checkout -b main
+git checkout -b master
 git add -A
 git commit -m 'deploy'
 
