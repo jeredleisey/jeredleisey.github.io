@@ -7,7 +7,7 @@
       <a class="button">Sign Up</a>
     </nav>
     <div class="container">
-      <h2 class="main-title">hello. my name is jered.</h2>
+      <h2 class="main-title">hola. me llamo jered.</h2>
     </div>
     <div class="boxes">
       <div
