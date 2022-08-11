@@ -1,55 +1,16 @@
 <script setup lang="ts"></script>
 
 <template>
+  <video autoplay muted loop id="myVideo">
+    <source src="../assets/bouncy.mp4" type="video/mp4" />
+  </video>
+
   <section>
     <nav>
       <h4>developedbyjered</h4>
-      <a class="button">Sign Up</a>
     </nav>
     <div class="container">
-      <h2 class="main-title">hola. me llamo jered.</h2>
-    </div>
-    <div class="boxes">
-      <div
-        class="image"
-        style="
-          background-image: url('https://www.belancio.com/foundation/wp-content/uploads/curology-mini.jpg');
-          width: 100%;
-          height: 100vh;
-        "
-      ></div>
-      <div
-        class="image"
-        style="
-          background-image: url('https://www.belancio.com/foundation/wp-content/uploads/tradesy-mini.jpg');
-          width: 100%;
-          height: 100vh;
-        "
-      ></div>
-      <div
-        class="image"
-        style="
-          background-image: url('https://www.belancio.com/foundation/wp-content/uploads/revel-seasonings-mini.jpg');
-          width: 100%;
-          height: 100vh;
-        "
-      ></div>
-      <div
-        class="image"
-        style="
-          background-image: url('https://www.belancio.com/foundation/wp-content/uploads/irvine-copmany-mini.jpg');
-          width: 100%;
-          height: 100vh;
-        "
-      ></div>
-      <div
-        class="image"
-        style="
-          background-image: url('https://www.belancio.com/foundation/wp-content/uploads/rightnow-mini.jpg');
-          width: 100%;
-          height: 100vh;
-        "
-      ></div>
+      <h2 class="main-title">one day...</h2>
     </div>
   </section>
 </template>
@@ -59,11 +20,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Righteous', cursive;
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   width: 100%;
   display: flex;
   padding: 3rem 10rem;
@@ -80,18 +41,19 @@ nav {
 
 .main-title {
   position: fixed;
-  top: 45%;
-  left: 45%;
+  top: 55%;
+  left: 65%;
   font-size: 4rem;
-  transform: translate(-20%, -45%);
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 0;
 }
 
-.boxes {
-  display: block;
-  background: rgb(24, 24, 24);
-  overflow: hidden;
-  position: absolute;
-  z-index: 2;
-  width: 100%;
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 </style>
