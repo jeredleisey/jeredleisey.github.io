@@ -10,6 +10,7 @@
     "deploy": "echo 'www.jeredleisey.com' > ./dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
+    "gsap": "^3.10.4",
     "moment": "^2.29.4",
     "vue": "^3.2.25"
   },

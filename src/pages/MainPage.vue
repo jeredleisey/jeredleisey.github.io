@@ -1,4 +1,34 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { onMounted } from 'vue';
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#hero-text',
+      start: 'center center',
+      end: 'center top',
+      scrub: true,
+    },
+  });
+  tl.to('#hero-text', {
+    yPercent: -45,
+    fontSize: '25vw',
+    duration: 3,
+    ease: 'power2.inOut',
+  });
+
+  tl.to('#hero-text', {
+    opacity: 0,
+    ease: 'power1.inOut',
+    duration: 3,
+    delay: 5,
+  });
+});
+</script>
 
 <template>
   <section id="hero-container">
@@ -17,7 +47,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Righteous', cursive;
 }
 
 #hero-container {
@@ -25,7 +54,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: url('https://images.pexels.com/photos/13009545/pexels-photo-13009545.jpeg'); */
   background: url('https://crustac.fr/wp-content/themes/crustac/img/home_intro_bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,12 +62,33 @@
   z-index: 0;
 }
 
+#hero-text {
+  position: fixed;
+  background: url('https://i.imgur.com/svrRBtr.gif');
+  background-size: 100%;
+  background-position: center;
+  background-clip: text;
+  color: #00000000;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #6f6f6f;
+  font-size: 30vw;
+  font-family: 'Righteous', cursive;
+  letter-spacing: 1px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  z-index: 0;
+  font-family: 'Righteous', cursive;
+}
+
 #scroll-hint {
   position: fixed;
   font-family: 'Inter', sans-serif;
   font-size: 1.5em;
   color: #3f3f3f;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
@@ -54,25 +103,5 @@
 
 #app {
   height: 100vh;
-}
-
-#hero-text {
-  position: fixed;
-  background: url('https://i.imgur.com/svrRBtr.gif');
-  background-size: 100%;
-  background-position: center;
-  background-clip: text;
-  color: #00000000;
-  text-transform: uppercase;
-  /* -webkit-text-stroke: 1px #3f3f3f; */
-  font-size: 30vw;
-  font-family: 'Righteous', cursive;
-  letter-spacing: 1px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-align: center;
-  z-index: 0;
 }
 </style>
