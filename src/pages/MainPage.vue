@@ -1,11 +1,19 @@
 <script setup lang="ts">
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap, ScrollTrigger, ScrollSmoother } from 'gsap-trial/all';
 import { onMounted } from 'vue';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+let getRatio = (el: HTMLElement) =>
+  window.innerHeight / (window.innerHeight + el.offsetHeight);
 
 onMounted(() => {
+  ScrollSmoother.create({
+    smooth: 1,
+    effects: true,
+    smoothTouch: 0.1,
+  });
+
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: '#hero-text',
@@ -14,19 +22,40 @@ onMounted(() => {
       scrub: true,
     },
   });
-  tl.to('#hero-text', {
-    yPercent: -45,
-    fontSize: '25vw',
-    duration: 3,
-    ease: 'power2.inOut',
-  });
+  // tl.to('#hero-text', {
+  //   yPercent: -45,
+  //   fontSize: '25vw',
+  //   duration: 3,
+  //   ease: 'power2.inOut',
+  // });
 
-  tl.to('#hero-text', {
-    opacity: 0,
-    ease: 'power1.inOut',
-    duration: 3,
-    delay: 5,
-  });
+  // tl.to('#hero-text', {
+  //   opacity: 0,
+  //   ease: 'power1.inOut',
+  //   duration: 3,
+  //   delay: 5,
+  // });
+
+  const el = document.getElementById('secondary');
+
+  gsap.fromTo(
+    el,
+    {
+      backgroundPosition: () => `100% ${-window.innerHeight * getRatio(el!)}px`,
+    },
+    {
+      backgroundPosition: () =>
+        `100% ${window.innerHeight * (1 - getRatio(el!))}px`,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+        invalidateOnRefresh: true,
+      },
+    }
+  );
 });
 </script>
 
@@ -40,6 +69,8 @@ onMounted(() => {
   </section>
 
   <section id="secondary"></section>
+  <section id="three"></section>
+  <section id="four"></section>
 </template>
 
 <style scoped>
@@ -64,7 +95,7 @@ onMounted(() => {
 
 #hero-text {
   position: fixed;
-  background: url('https://i.imgur.com/svrRBtr.gif');
+  /* background: url('https://i.imgur.com/svrRBtr.gif'); */
   background-size: 100%;
   background-position: center;
   background-clip: text;
@@ -96,8 +127,9 @@ onMounted(() => {
 
 #secondary {
   position: relative;
-  height: 500vh;
-  background-color: #fff;
+  height: 100vh;
+  background: url('../assets/coors.png');
+  background-size: cover;
   z-index: 1;
 }
 
