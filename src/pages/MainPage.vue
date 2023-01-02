@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import { gsap, ScrollTrigger, ScrollSmoother } from 'gsap-trial/all';
+<!-- <script setup lang="ts">
+// import { gsap, ScrollTrigger, ScrollSmoother } from 'gsap-trial/all';
 import { onMounted } from 'vue';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -136,4 +136,4 @@ onMounted(() => {
 #app {
   height: 100vh;
 }
-</style>
+</style> -->

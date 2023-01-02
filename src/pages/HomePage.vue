@@ -8,19 +8,17 @@
           <a href="https://www.jeredleisey.com">Jered Leisey</a>
         </p>
       </div>
-      <div class="wrap space-x-4">
-        <a href="https://www.jeredleisey.com/anim" itemprop="url">
-          <span itemprop="name">Animations</span>
+      <div class="nav-primary wrap space-x-4">
+        <a href="https://www.jeredleisey.com/" itemprop="url">
+          <span itemprop="name">Work</span>
         </a>
-
-        <a href="https://www.jeredleisey.com/portfolio" itemprop="url">
-          <span itemprop="name">Portfolio</span>
+        <a href="https://www.jeredleisey.com/" itemprop="url">
+          <span itemprop="name">Journal</span>
         </a>
-
-        <a href="https://www.jeredleisey.com/resume" itemprop="url">
-          <span itemprop="name">Resumé</span>
+        <a href="https://www.jeredleisey.com/" itemprop="url">
+          <span itemprop="name">Bio</span>
         </a>
-        <a href="https://www.jeredleisey.com/contact" itemprop="url">
+        <a href="https://www.jeredleisey.com/" itemprop="url">
           <span itemprop="name">Contact</span>
         </a>
       </div>
@@ -30,6 +28,7 @@
 </template>
 
 <style>
+@import url('https://use.typekit.net/xnx2llc.css');
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -38,13 +37,7 @@
 html {
   -moz-osx-font-smoothing: grayscale;
 }
-body {
-  color: #000;
-  font-family: 'kepler-std', serif;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.75;
-}
+
 @media only screen and (max-width: 1120px) {
   .site-header {
     max-width: 960px;
@@ -63,6 +56,22 @@ body {
   padding-bottom: 40px;
   padding-top: 40px;
 }
+.site-title a {
+  color: #000;
+  display: block;
+  font-family: 'kepler-std', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.nav-primary a {
+  font-family: 'acumin-pro-condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
 a,
 input:focus,
 input[type='button'],
@@ -80,5 +89,8 @@ textarea:focus,
 .site-container {
   background-color: #f5f5f5;
   height: 100vh;
+}
+a:hover {
+  color: rgb(216, 194, 53);
 }
 </style>
