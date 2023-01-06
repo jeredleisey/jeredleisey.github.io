@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import HomePage from './pages/HomePage.vue';
+import SiteHeader from './components/SiteHeader.vue';
 </script>
 
 <template>
-  <HomePage />
+  <SiteHeader />
+  <router-view></router-view>
 </template>
 
-<style></style>
+<style scoped></style>
