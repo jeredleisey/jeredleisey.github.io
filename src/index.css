@@ -15,9 +15,6 @@
 html {
   -moz-osx-font-smoothing: grayscale;
 }
-#app {
-  background-color: #f0f0f0;
-}
 @media only screen {
   .site-header,
   .welcome-text {
