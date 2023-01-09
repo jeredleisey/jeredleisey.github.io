@@ -23,12 +23,12 @@ html {
   }
 }
 @media only screen and (max-width: 1120px) {
-  .site-header {
+  .site-header-content {
     max-width: 960px;
   }
 }
 @media only screen and (max-width: 1280px) {
-  .site-header {
+  .site-header-content {
     max-width: 1080px;
   }
 }

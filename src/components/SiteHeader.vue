@@ -20,8 +20,11 @@ const headerLinks = [
 </script>
 
 <template>
-  <div class="site-header">
-    <div class="site-header-content flex justify-between">
+  <div class="site-header flex items-center sticky h-32 -top-12 z-10">
+    <!--TODO: Fix mobile screwing up width-->
+    <div
+      class="site-header-content flex justify-between items-center h-20 w-[1200px] mx-auto top-0"
+    >
       <div class="title-area">
         <p class="site-title">
           <a href="http://localhost:5173">Jered Leisey</a>
@@ -40,14 +43,6 @@ const headerLinks = [
 .site-header {
   background-color: #fff;
 }
-.site-header-content {
-  line-height: 1;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
-  padding-bottom: 40px;
-  padding-top: 40px;
-}
 .site-title a {
   color: #000;
   display: block;
@@ -65,12 +60,6 @@ const headerLinks = [
   text-transform: uppercase;
 }
 a,
-input:focus,
-input[type='button'],
-input[type='reset'],
-input[type='submit'],
-textarea:focus,
-.button,
 .site-header {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
