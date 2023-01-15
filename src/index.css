@@ -1,4 +1,5 @@
 @import url('https://use.typekit.net/xnx2llc.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,21 +15,4 @@
 }
 html {
   -moz-osx-font-smoothing: grayscale;
-}
-@media only screen {
-  .site-header,
-  .welcome-text {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-@media only screen and (max-width: 1120px) {
-  .site-header-content {
-    max-width: 960px;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  .site-header-content {
-    max-width: 1080px;
-  }
 }

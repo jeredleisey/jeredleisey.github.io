@@ -20,20 +20,22 @@ const headerLinks = [
 </script>
 
 <template>
-  <div class="site-header flex items-center sticky h-32 -top-12 z-10">
-    <!--TODO: Fix mobile screwing up width-->
+  <div class="w-full fixed z-20 py-4 bg-white">
     <div
-      class="site-header-content flex justify-between items-center h-20 w-[1200px] mx-auto top-0"
+      class="site-header-content flex justify-between items-center px-8 lg:max-w-4xl xl:max-w-5xl max-w-6xl mx-auto"
     >
       <div class="title-area">
         <p class="site-title">
           <a href="http://localhost:5173">
-            <svg height="2.6em" width="2em" viewBox="0 0 612 792">
-              <g id="jbo9oi.tif">
-                <g>
-                  <g>
-                    <path
-                      d="M272.81,384.72c9.4-9.57,18.99-19.38,28.65-29.13c1.71-1.72,3.76-3.09,5.53-4.75c7.57-7.05,5.43-16.76,6.7-25.47
+            <svg
+              class="hover:fill-[#d8c235] transition-all duration-300"
+              height="2.6em"
+              width="2em"
+              viewBox="0 0 612 792"
+            >
+              <g>
+                <path
+                  d="M272.81,384.72c9.4-9.57,18.99-19.38,28.65-29.13c1.71-1.72,3.76-3.09,5.53-4.75c7.57-7.05,5.43-16.76,6.7-25.47
 				                  c2.78-19.09,4.24-38.43,8.05-57.29c4.24-21.01,10.44-41.62,15.91-62.38c3.44-13.03,6.49-26.2,10.84-38.93
                           c4.49-13.12,10.38-25.76,15.59-38.64c3.47-8.58,6.79-17.21,10.24-25.79c2.87-7.13,5.66-14.31,8.89-21.28
                           c1.14-2.45,3.62-4.25,5.24-6.52c5.29-7.39,9.87-15.4,15.85-22.17c6.79-7.69,14.02-15.63,23.83-19.35
@@ -73,56 +75,27 @@ const headerLinks = [
                           c12.12-6.23,24.53-11.79,35.37-20.66c8.09-6.61,14.01-14.37,18.85-23.11c10.04-18.14,13.26-38.56,17.99-58.39
                           c3.11-13,4.92-26.32,7.34-39.49c2.29-12.46,4.84-24.88,6.84-37.39c1.31-8.19,2-16.5,2.66-24.78
                           C243.03,485.58,243.37,476.61,243.88,467.52z"
-                    />
-                    <path
-                      d="M249.6,277.42c-2.16-9.23,6.56-17.64,16.93-17.96c9.79-0.3,19.12,9.07,19.33,19.64c0.11,5.68-9.65,13.85-17.2,14.4
+                />
+                <path
+                  d="M249.6,277.42c-2.16-9.23,6.56-17.64,16.93-17.96c9.79-0.3,19.12,9.07,19.33,19.64c0.11,5.68-9.65,13.85-17.2,14.4
 				                  C257.71,294.29,250.22,287.98,249.6,277.42z"
-                    />
-                  </g>
-                </g>
+                />
               </g>
             </svg>
           </a>
         </p>
       </div>
-      <div class="nav-primary wrap space-x-4">
-        <a v-for="headerLink in headerLinks" :href="headerLink.url">
-          <span itemprop="name">{{ headerLink.text }}</span>
+      <div
+        class="nav-primary wrap space-x-4 font-['acumin-pro-condensed'] font-light text-base uppercase"
+      >
+        <a
+          v-for="headerLink in headerLinks"
+          :href="headerLink.url"
+          class="hover:text-[#d8c235] transition-all duration-300"
+        >
+          <span itemprop="name" class="text-lg">{{ headerLink.text }}</span>
         </a>
       </div>
     </div>
   </div>
 </template>
-
-<style scoped>
-.site-header {
-  background-color: #fff;
-}
-.site-title a {
-  color: #000;
-  display: block;
-  font-family: 'kepler-std', serif;
-  font-size: 20px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.nav-primary a {
-  font-family: 'acumin-pro-condensed', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-a,
-.site-header {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-a:hover {
-  color: rgb(216, 194, 53);
-}
-</style>
