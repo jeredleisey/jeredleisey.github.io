@@ -6,45 +6,18 @@ const route = useRoute();
 </script>
 
 <template>
-  <div class="blog-page">
-    <div class="blog-content">
-      <span class="title">
+  <div class="pt-32 bg-white relative z-10">
+    <div class="max-w-prose m-auto flex flex-col">
+      <span class="m-auto font-['kepler-std'] text-5xl font-bold">
         {{ route.params.articleTitle }}
       </span>
-      <div class="content" v-for="i in 10" :id="'paragraph-' + i">
+      <div
+        class="content mb-4 font-['Inter'] font-normal text-xl"
+        v-for="i in 10"
+        :id="'paragraph-' + i"
+      >
         {{ loremIpsum({ count: 1, units: 'paragraphs' }) }}
       </div>
     </div>
   </div>
 </template>
-
-<style scoped>
-.blog-page {
-  background-color: #fff;
-  position: relative;
-  z-index: 1;
-}
-.blog-content {
-  margin: auto;
-  padding-top: 2em;
-  display: flex;
-  flex-direction: column;
-  max-width: 520px;
-}
-.title {
-  margin: auto;
-  font-family: kepler-std, serif;
-  font-weight: 700;
-  font-size: 3em;
-  white-space: nowrap;
-}
-.content {
-  margin-bottom: 1em;
-  font-family: 'kepler-std', serif;
-  font-weight: 400;
-  font-size: 1.3em;
-}
-p {
-  margin-bottom: 1em !important;
-}
-</style>
