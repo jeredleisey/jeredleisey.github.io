@@ -6,7 +6,7 @@ const headerLinks = [
   },
   {
     url: 'http://www.jeredleisey.com/blog/Sample',
-    text: 'Journal',
+    text: 'Blog',
   },
   {
     url: 'https://www.jeredleisey.com/bio',
