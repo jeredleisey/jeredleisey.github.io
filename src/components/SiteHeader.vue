@@ -1,19 +1,19 @@
 <script setup lang="ts">
 const headerLinks = [
   {
-    url: 'https://www.jeredleisey.com',
-    text: 'Work',
+    url: 'https://www.jeredleisey.com/projects',
+    text: 'Projects',
   },
   {
-    url: 'http://localhost:5173/blog/3',
+    url: 'http://www.jeredleisey.com/blog/Sample Title',
     text: 'Journal',
   },
   {
-    url: 'https://www.jeredleisey.com',
+    url: 'https://www.jeredleisey.com/bio',
     text: 'Bio',
   },
   {
-    url: 'https://www.jeredleisey.com',
+    url: 'https://www.jeredleisey.com/contact',
     text: 'Contact',
   },
 ];
