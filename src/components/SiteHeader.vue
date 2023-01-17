@@ -1,19 +1,19 @@
 <script setup lang="ts">
 const headerLinks = [
   {
-    url: 'https://www.jeredleisey.com/projects',
+    url: '/projects',
     text: 'Projects',
   },
   {
-    url: 'https://www.jeredleisey.com/blog/Sample',
+    url: '/blog/Sample',
     text: 'Blog',
   },
   {
-    url: 'https://www.jeredleisey.com/bio',
+    url: '/bio',
     text: 'Bio',
   },
   {
-    url: 'https://www.jeredleisey.com/contact',
+    url: '/contact',
     text: 'Contact',
   },
 ];
@@ -86,13 +86,13 @@ const headerLinks = [
       <div
         class="nav-primary wrap space-x-4 font-['acumin-pro-condensed'] font-light text-base uppercase"
       >
-        <a
+        <router-link
           v-for="headerLink in headerLinks"
-          :href="headerLink.url"
+          :to="headerLink.url"
           class="hover:text-[#d8c235] transition-all duration-300"
         >
           <span itemprop="name" class="text-lg">{{ headerLink.text }}</span>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
