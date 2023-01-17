@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Welcome from '../components/Welcome.vue';
 import JournalPage from '../pages/JournalPage.vue';
+import NotFound from '@/components/NotFound.vue';
 
 const routes = [
   {
@@ -10,6 +11,11 @@ const routes = [
   {
     path: '/blog/:articleTitle',
     component: JournalPage,
+  },
+  {
+    path: '/:pathMatch(.*)',
+    name: 'not-found',
+    component: NotFound,
   },
 ];
 
