@@ -10,38 +10,40 @@ import { loremIpsum } from 'lorem-ipsum';
         Hey, I'm Jered Leisey, a space aficionado and zealous open sourceror.
       </p>
       <p>
-        Creator of Vitest, Slidev, VueUse, UnoCSS, Type Challenges and others.
-        <br />
-        Core team member of Vue, Nuxt and Vite.
-        <br />
-        Team member of Windi CSS, wenyan-lang 文言 and Intlify.
+        Seeing data come to life is the reason I write code. My life goal is to
+        be a part of humanity's proliferation into space. I will acheive that by
+        contributing to open source projects in the astrophysics community.
       </p>
       <p>
         Dreaming up ideas and making them come true is where my passion lies.
-        You can find my full projects list here. I have also started a 100-day
-        challenge about design, compform, interactivity, and experimenting with
-        new things on 100.antfu.me.
+        You can find
+        <router-link to="projects"> a few of my projects here</router-link>. I
+        will be starting a 100-day challenge soon to bring my knowledge of code
+        back to my roots in astrophysics. Keep an eye out for the progress at
+        <a href="https://100.jeredleisey.com" target="_blank" rel="noopener">
+          100.jeredleisey.com</a
+        >.
       </p>
       <p>
-        Outside of programming, I enjoy doing photography and traveling. Some of
-        my photos can be found on Instagram. If you happen to be in the same
-        city I live (currently in Paris), maybe we can hang out and take some
-        photos or code together.
+        When I am not programming, I enjoy photography, traveling, and disc
+        golf. Some of my photos can be found on Instagram.
       </p>
+      <hr class="w-12 mx-auto my-8 border-[#7d7d7d4d]" />
       <p>
-        Find me on GitHub, Twitter, Mastodon, YouTube, 知乎, 微博 or 哔哩哔哩.
+        Find me on
+        <a href="https://github.com/jeredleisey">GitHub</a>
+        or
+        <a href="https://linkedin.com/in/jeredleisey">LinkedIn</a>.
         <br />
-        Mail me at hi@antfu.me.
-        <br />
-        Chat with the community at my Discord Server.
+        Mail me at
+        <a href="mailto:jered@differentialdesign.io">
+          jered@differentialdesign.io</a
+        >.
       </p>
       <p>
-        If you like my works, consider sponsoring me on GitHub Sponsor to keep
-        them sustainable.
+        If you like my work, consider sponsoring me on GitHub Sponsor or buy me
+        a coffee.
       </p>
-      <!-- <p class="mb-5">
-        {{ loremIpsum({ count: 10, units: 'paragraphs' }) }}
-      </p> -->
     </div>
   </div>
 </template>
@@ -52,5 +54,14 @@ p {
   font-weight: 400;
   margin-top: 1.25em;
   margin-bottom: 1.25em;
+}
+
+a {
+  border-bottom: 1px solid rgba(121, 121, 121, 0.3);
+  transition: border 0.3s ease-in-out;
+}
+
+a:hover {
+  border-bottom: 1px solid black;
 }
 </style>
