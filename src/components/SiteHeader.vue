@@ -25,7 +25,7 @@ const headerLinks = [
       class="site-header-content flex justify-between items-center px-8 lg:max-w-4xl xl:max-w-5xl max-w-6xl mx-auto"
     >
       <div class="w-[2em] h-[2.6em]">
-        <a href="http://localhost:5173">
+        <router-link to="/">
           <svg
             class="hover:fill-[#d8c235] transition-all duration-300"
             height="2.6em"
@@ -81,7 +81,7 @@ const headerLinks = [
               />
             </g>
           </svg>
-        </a>
+        </router-link>
       </div>
       <div
         class="nav-primary wrap space-x-4 font-['acumin-pro-condensed'] font-light text-base uppercase"
