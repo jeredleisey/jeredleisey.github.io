@@ -1,3 +1,12 @@
 <script setup lang="ts"></script>
 
-<template>These aren't the droids you're looking for.</template>
+<template>
+  <div class="h-screen bg-carina bg-auto bg-center z-10 relative">
+    <div
+      class="text-white font-acumin-pro-condensed h-full flex flex-col justify-center items-center"
+    >
+      <span class="text-[16rem] font-extrabold">404</span>
+      <span class="text-xl">Houston, we have a problem.</span>
+    </div>
+  </div>
+</template>
