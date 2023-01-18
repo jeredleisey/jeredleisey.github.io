@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        carina: "url('./carina_nircam.jpg')",
+        carina: "url('/carina_nircam.jpg')",
       },
       fontFamily: {
         inter: 'Inter',
