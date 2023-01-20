@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { gsap, DrawSVGPlugin, ScrollTrigger } from 'gsap-trial/all';
+import { gsap, DrawSVGPlugin, ScrollTrigger } from 'gsap/all';
 import { onMounted } from 'vue';
 
 gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger);

@@ -10,7 +10,7 @@
     "deploy": "echo 'www.jeredleisey.com' > ./dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
-    "gsap": "^3.10.4",
+    "gsap": "npm:@gsap/shockingly@^3.11.4",
     "gsap-trial": "^3.10.4",
     "lorem-ipsum": "^2.0.8",
     "moment": "^2.29.4",
