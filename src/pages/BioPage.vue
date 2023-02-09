@@ -47,7 +47,7 @@ onMounted(() => {
       class="top-text min-h-[50vh] w-screen flex justify-center items-center bg-[#fdf8ec]"
     >
       <div
-        class="font-acier-bat-gris text-9xl text-[#d6d3cb] flex flex-col items-center"
+        class="font-acier-bat-gris text-2xl md:text-9xl text-[#d6d3cb] flex flex-col items-center"
       >
         <div id="name"><span class="text-[#0c0e12]">Jered</span> Davis</div>
         <div>Leisey</div>
