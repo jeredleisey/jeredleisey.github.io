@@ -20,7 +20,7 @@ const headerLinks = [
 </script>
 
 <template>
-  <div class="w-full fixed z-20 py-4 bg-[#fdf8ec]">
+  <div class="w-full fixed z-20 py-4 bg-white">
     <div
       class="site-header-content flex justify-between items-center px-8 lg:max-w-4xl xl:max-w-5xl max-w-6xl mx-auto"
     >
