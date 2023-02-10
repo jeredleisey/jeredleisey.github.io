@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router';
 const headerLinks = [
   {
     url: '/projects',
@@ -17,18 +18,26 @@ const headerLinks = [
     text: 'Contact',
   },
 ];
+
+const route = useRoute();
 </script>
 
 <template>
-  <div class="w-full fixed z-20 py-4 bg-white">
+  <div
+    class="w-full fixed z-20 py-4"
+    :class="
+      route.path === '/contact' ? 'bg-zinc-500 md:bg-transparent' : 'bg-white'
+    "
+  >
     <div
       class="site-header-content flex justify-between items-center px-8 lg:max-w-4xl xl:max-w-5xl max-w-6xl mx-auto"
     >
-      <div class="w-[2em] h-[2.6em]">
+      <div class="w-8 h-10">
         <router-link to="/">
           <svg
-            class="hover:fill-[#d8c235] transition-all duration-300"
-            height="2.6em"
+            :class="route.path === '/contact' ? 'fill-white' : 'fill-black'"
+            class="fill-white hover:fill-[#d8c235] transition-all duration-300"
+            height="2.5em"
             width="2em"
             viewBox="0 0 612 792"
           >
@@ -89,7 +98,8 @@ const headerLinks = [
         <router-link
           v-for="headerLink in headerLinks"
           :to="headerLink.url"
-          class="hover:text-[#d8c235] transition-all duration-300"
+          :class="route.path === '/contact' ? 'text-white' : 'text-black'"
+          class="text-white hover:text-[#d8c235] transition-all duration-300"
         >
           <span itemprop="name" class="text-lg">{{ headerLink.text }}</span>
         </router-link>
