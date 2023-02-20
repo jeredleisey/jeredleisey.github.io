@@ -3,6 +3,16 @@ module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      colors: {
+        my: {
+          patina: '#CDCDC3',
+          bronze: '#CAA45D',
+          gold: '#CC922F',
+          slate: '#1E3957',
+          royal: '#0A2749',
+          midnight: '#0F1F2F',
+        },
+      },
       backgroundImage: {
         carina: "url('/carina_nircam.jpg')",
       },
