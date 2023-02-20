@@ -24,7 +24,7 @@ const route = useRoute();
 
 <template>
   <div
-    class="w-full fixed z-20 py-4"
+    class="w-full fixed z-20 py-3"
     :class="
       route.path === '/contact' ? 'bg-zinc-500 md:bg-transparent' : 'bg-white'
     "
@@ -36,7 +36,7 @@ const route = useRoute();
         <router-link to="/">
           <svg
             :class="route.path === '/contact' ? 'fill-white' : 'fill-black'"
-            class="fill-white hover:fill-[#d8c235] transition-all duration-300"
+            class="fill-white hover:fill-my-gold transition-all duration-300"
             height="2.5em"
             width="2em"
             viewBox="0 0 612 792"
@@ -99,7 +99,7 @@ const route = useRoute();
           v-for="headerLink in headerLinks"
           :to="headerLink.url"
           :class="route.path === '/contact' ? 'text-white' : 'text-black'"
-          class="text-white hover:text-[#d8c235] transition-all duration-300"
+          class="text-white hover:text-my-gold transition-all duration-300"
         >
           <span itemprop="name" class="text-lg">{{ headerLink.text }}</span>
         </router-link>

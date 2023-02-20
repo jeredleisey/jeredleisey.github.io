@@ -3,7 +3,7 @@ import { loremIpsum } from 'lorem-ipsum';
 </script>
 
 <template>
-  <div class="h-screen z-10 relative py-32 bg-white px-7">
+  <div class="min-h-[calc(100vh-4rem)] z-10 relative bg-white px-7">
     <div class="mx-auto max-w-prose text-lg">
       <h1 class="text-4xl font-extrabold mb-8">Jered Leisey</h1>
       <p>

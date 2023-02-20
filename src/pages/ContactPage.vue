@@ -3,7 +3,7 @@ const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 </script>
 
 <template>
-  <section class="text-gray-600 body-font fixed w-screen h-screen z-10">
+  <section class="text-gray-600 body-font fixed w-screen h-screen -mt-16 z-10">
     <div class="absolute inset-0 bg-gray-300">
       <iframe
         style="filter: grayscale(0.9) contrast(0.7) opacity(1) invert(100%)"
@@ -21,9 +21,9 @@ const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
         frameborder="0"
       ></iframe>
     </div>
-    <div class="container px-5 py-24 mx-auto flex">
+    <div class="container px-5 my-auto pt-20 md:pt-16 flex">
       <div
-        class="lg:w-1/3 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 relative z-10 shadow-md"
+        class="lg:w-1/3 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full relative z-10 shadow-md"
       >
         <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
           Get in touch

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Welcome from '../components/Welcome.vue';
 import BioPage from '@/pages/BioPage.vue';
-import JournalPage from '../pages/JournalPage.vue';
+import BlogPage from '../pages/BlogPage.vue';
 import NotFound from '@/components/NotFound.vue';
 import ContactPage from '../pages/ContactPage.vue';
 
@@ -16,7 +16,7 @@ const routes = [
   },
   {
     path: '/blog/:articleTitle',
-    component: JournalPage,
+    component: BlogPage,
   },
   {
     path: '/contact',
