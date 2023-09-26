@@ -5,7 +5,7 @@ import { loremIpsum } from 'lorem-ipsum';
 <template>
   <div class="min-h-[calc(100vh-4rem)] z-10 relative bg-white px-7">
     <div class="flex justify-center mx-auto max-w-prose text-lg">
-      <h1 class="mt-8">Changes coming soon!</h1>
+      <h1 class="mt-8">Changes coming soon!!</h1>
       <!-- <h1 class="text-4xl font-extrabold mb-8">Jered Leisey</h1>
       <p>
         Hey, I'm Jered Leisey, a space aficionado and zealous open sourceror.
